@@ -2,12 +2,12 @@
 import React from "react";
 
 const projects = [
-  { id: 1, image: "/img/project-1.jpg" },
-  { id: 2, image: "/img/project-2.jpg" },
-  { id: 3, image: "/img/project-3.jpg" },
-  { id: 4, image: "/img/project-4.jpg" },
-  { id: 5, image: "/img/project-5.jpg" },
-  { id: 6, image: "/img/project-6.jpg" },
+  { id: 1, image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project3-600x800.jpg" },
+  { id: 2, image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project3-600x800.jpg" },
+  { id: 3, image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project3-600x800.jpg" },
+  { id: 4, image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project3-600x800.jpg" },
+  { id: 5, image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project3-600x800.jpg" },
+  { id: 6, image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project3-600x800.jpg" },
 ];
 
 export default function ProjectsPage() {
