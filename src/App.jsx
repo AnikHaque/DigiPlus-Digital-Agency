@@ -9,6 +9,7 @@ import PricingPage from "./components/PricingPage";
 import FaqPage from "./components/FaqPage";
 import ProjectDetailsPage from "./components/ProjectDetails";
 import ProjectsPage from "./components/ProjectsPage";
+import ServicesPage from "./components/ServicePage";
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
          <Route path="/team" element={<TeamPage />} />
          <Route path="/pricing" element={<PricingPage />} />
          <Route path="/project" element={<ProjectsPage />} />
+          <Route path="/service" element={<ServicesPage />} />
          <Route path="/project-details" element={<ProjectDetailsPage />} />
          <Route path="/faq" element={<FaqPage />} />
         <Route path="/team-details" element={<TeamDetailsPage />} />
