@@ -6,7 +6,7 @@ export default function ServiceDetailsPage() {
     <div className="min-h-screen bg-white text-gray-900">
       <Header />
       <Hero />
-      <ServiceLayout />
+      <ServiceContent />
       <CTASection />
       <Footer />
     </div>
@@ -93,28 +93,10 @@ function Hero() {
   );
 }
 
-/* ---------------- MAIN LAYOUT ---------------- */
+/* ---------------- MAIN SERVICE CONTENT ---------------- */
 
-function ServiceLayout() {
-  return (
-    <section className="bg-white py-16 md:py-20">
-      <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-[1fr,2fr]">
-          {/* LEFT SIDEBAR */}
-          <Sidebar />
-
-          {/* RIGHT CONTENT */}
-          <MainContent />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ----- SIDEBAR (left) ----- */
-
-function Sidebar() {
-  const services = [
+function ServiceContent() {
+  const serviceList = [
     "Web Development",
     "UI/UX Design",
     "Mobile Application",
@@ -124,154 +106,167 @@ function Sidebar() {
   ];
 
   return (
-    <div className="space-y-6">
-      {/* Service list card */}
-      <div className="rounded-3xl bg-white p-6 shadow-[0_20px_40px_rgba(15,23,42,0.08)]">
-        <h3 className="mb-4 text-sm font-semibold text-gray-900">Service List</h3>
-        <div className="space-y-2 text-sm">
-          {services.map((name, idx) => {
-            const active = idx === 0;
-            return (
-              <button
-                key={name}
-                className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-[13px] ${
-                  active
-                    ? "bg-yellow-400 text-gray-900 font-semibold"
-                    : "bg-gray-50 text-gray-700 hover:bg-gray-100"
-                }`}
-              >
-                <span>{name}</span>
-                <span className="text-xs">›</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Need help card */}
-      <div className="overflow-hidden rounded-3xl bg-gray-900 text-white shadow-[0_20px_40px_rgba(15,23,42,0.18)]">
-        <div className="h-40 w-full overflow-hidden">
-          <img
-            src="/img/service-help.jpg"
-            alt="Help"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="space-y-4 px-6 py-6 text-center">
-          <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-yellow-400 text-gray-900">
-            💬
+    <section className="bg-white py-16 md:py-20">
+      <div className="mx-auto max-w-6xl space-y-10 px-4 md:px-6 lg:px-8">
+        {/* --------- ROW 1: Service list (left) + big image (right) --------- */}
+        <div className="grid gap-8 lg:grid-cols-[0.9fr,2.1fr]">
+          {/* Service List card */}
+          <div className="rounded-3xl bg-white p-6 shadow-[0_20px_40px_rgba(15,23,42,0.08)]">
+            <h3 className="mb-4 text-sm font-semibold text-gray-900">
+              Service List
+            </h3>
+            <div className="space-y-2 text-sm">
+              {serviceList.map((item, idx) => {
+                const active = idx === 0;
+                return (
+                  <button
+                    key={item}
+                    className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-[13px] ${
+                      active
+                        ? "bg-yellow-400 text-gray-900 font-semibold"
+                        : "bg-gray-50 text-gray-700 hover:bg-gray-100"
+                    }`}
+                  >
+                    <span>{item}</span>
+                    <span className="text-xs">›</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
-          <div className="space-y-1 text-xs">
-            <p className="font-semibold text-white">Need help? Talk to expert</p>
-            <p className="text-gray-300">
-              Contact with us for any advice
-            </p>
+
+          {/* Big image */}
+          <div className="overflow-hidden rounded-3xl shadow-[0_20px_40px_rgba(15,23,42,0.10)]">
+            <img
+              src="/img/service-main.jpg"
+              alt="Web development team"
+              className="h-[320px] w-full object-cover md:h-[360px]"
+            />
           </div>
         </div>
-      </div>
 
-      {/* More Services form */}
-      <div className="rounded-3xl bg-white p-6 shadow-[0_20px_40px_rgba(15,23,42,0.08)]">
-        <h3 className="mb-4 text-sm font-semibold text-gray-900">
-          More Services
-        </h3>
-        <div className="space-y-3 text-xs">
-          <TextInput placeholder="Your Name" />
-          <TextInput placeholder="Email Address" />
-          <TextInput placeholder="Enter Subject" />
-          <TextInput placeholder="Enter Phone" />
-          <textarea
-            placeholder="Write a Message"
-            className="h-24 w-full rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-xs outline-none focus:border-yellow-400"
-          />
-          <button className="mt-1 w-full rounded-full bg-yellow-400 py-2 text-[11px] font-semibold tracking-[0.18em] text-gray-900">
-            SEND A MESSAGE
-          </button>
+        {/* --------- ROW 2: left (help + form) / right (text + two images) --------- */}
+        <div className="grid gap-8 lg:grid-cols-[0.9fr,2.1fr]">
+          {/* LEFT COLUMN: Help card + form */}
+          <div className="space-y-6">
+            {/* Help card */}
+            <div className="overflow-hidden rounded-3xl bg-gray-900 text-white shadow-[0_20px_40px_rgba(15,23,42,0.18)]">
+              <div className="h-40 w-full overflow-hidden">
+                <img
+                  src="/img/service-help.jpg"
+                  alt="Help"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="space-y-4 px-6 py-6 text-center">
+                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-yellow-400 text-gray-900">
+                  💬
+                </div>
+                <div className="space-y-1 text-xs">
+                  <p className="font-semibold text-white">
+                    Need help? Talk to expert
+                  </p>
+                  <p className="text-gray-300">
+                    Contact with us for any
+                    <br />
+                    advice
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* More services form */}
+            <div className="rounded-3xl bg-white p-6 shadow-[0_20px_40px_rgba(15,23,42,0.08)]">
+              <h3 className="mb-4 text-sm font-semibold text-gray-900">
+                More Services
+              </h3>
+              <div className="space-y-3 text-xs">
+                <Input placeholder="Your Name" />
+                <Input placeholder="Email Address" />
+                <Input placeholder="Enter Subject" />
+                <Input placeholder="Enter Phone" />
+                <textarea
+                  className="h-24 w-full rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-xs outline-none focus:border-yellow-400"
+                  placeholder="Write a Message"
+                />
+                <button className="mt-1 w-full rounded-full bg-yellow-400 py-2 text-[11px] font-semibold tracking-[0.18em] text-gray-900">
+                  SEND A MESSAGE
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN: text + images */}
+          <div className="space-y-8">
+            {/* text */}
+            <div className="space-y-5 text-sm leading-relaxed text-gray-600 md:text-[15px]">
+              <p className="text-xs text-gray-500">
+                Lorem ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry&apos;s standard
+                dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book. It
+                has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s.
+              </p>
+
+              <div className="space-y-3">
+                <h2 className="text-lg font-semibold text-gray-900">
+                  Digital Marketing
+                </h2>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam aperiam, eaque ipsa
+                  quae ab illo inventore veritatis et quasi architecto beatae
+                  vitae dicta sunt explicabo.
+                </p>
+                <p>
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                  qui dolorem ipsum quia dolor sit amet.
+                </p>
+                <p>
+                  But I must explain to you how all this mistaken idea of
+                  denouncing pleasure and praising pain was born and I will give
+                  you a complete account of the system, and expound the actual
+                  teachings of the great explorer of the truth.
+                </p>
+              </div>
+            </div>
+
+            {/* two images like screenshot */}
+            <div className="grid gap-5 md:grid-cols-2">
+              <img
+                src="/img/service-sub-1.jpg"
+                alt="Sub 1"
+                className="h-[220px] w-full rounded-2xl object-cover"
+              />
+              <img
+                src="/img/service-sub-2.jpg"
+                alt="Sub 2"
+                className="h-[220px] w-full rounded-2xl object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* --------- FULL WIDTH: Service Process + FAQ --------- */}
+        <div className="space-y-10">
+          <ServiceProcess />
+          <FAQSection />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-function TextInput({ placeholder }) {
+function Input({ placeholder }) {
   return (
     <input
       placeholder={placeholder}
       className="w-full rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-xs outline-none focus:border-yellow-400"
     />
-  );
-}
-
-/* ----- MAIN CONTENT (right) ----- */
-
-function MainContent() {
-  return (
-    <div className="space-y-10">
-      {/* big image */}
-      <div className="overflow-hidden rounded-3xl shadow-[0_20px_40px_rgba(15,23,42,0.12)]">
-        <img
-          src="/img/service-main.jpg"
-          alt="Service main"
-          className="h-[320px] w-full object-cover md:h-[360px]"
-        />
-      </div>
-
-      {/* digital marketing text */}
-      <section className="space-y-4 text-sm leading-relaxed text-gray-600 md:text-[15px]">
-        <p className="text-xs text-gray-500">
-          Lorem ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not
-          only five centuries, but also the leap into electronic typesetting in
-          remaining essentially unchanged. It was popularised in the 1960s.
-        </p>
-
-        <div className="space-y-3">
-          <h2 className="text-lg font-semibold text-gray-900">
-            Digital Marketing
-          </h2>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam aperiam, eaque ipsa quae ab
-            illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-            explicabo.
-          </p>
-          <p>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-            fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-            ipsum quia.
-          </p>
-          <p>
-            But I must explain to you how all this mistaken idea of denouncing
-            pleasure and praising pain was born and I will give you a complete
-            account of the system, and expound the actual teachings of the great
-            explorer of the truth, the master-builder of human happiness.
-          </p>
-        </div>
-      </section>
-
-      {/* two images side by side */}
-      <div className="grid gap-5 md:grid-cols-2">
-        <img
-          src="/img/service-sub-1.jpg"
-          alt="sub1"
-          className="h-[220px] w-full rounded-2xl object-cover"
-        />
-        <img
-          src="/img/service-sub-2.jpg"
-          alt="sub2"
-          className="h-[220px] w-full rounded-2xl object-cover"
-        />
-      </div>
-
-      {/* Service Process */}
-      <ServiceProcess />
-
-      {/* FAQ */}
-      <FAQSection />
-    </div>
   );
 }
 
@@ -321,7 +316,7 @@ function ServiceProcess() {
   );
 }
 
-/* ---------------- FAQ ACCORDION ---------------- */
+/* ---------------- FAQ SECTION ---------------- */
 
 const faqItems = [
   {
@@ -352,19 +347,17 @@ function FAQSection() {
       </h3>
       <div className="rounded-2xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
         {faqItems.map((item, idx) => {
-          const open = idx === openIndex;
+          const open = openIndex === idx;
           return (
             <div key={item.q} className="border-b last:border-none">
               <button
                 onClick={() => setOpenIndex(open ? -1 : idx)}
                 className="flex w-full items-center justify-between px-6 py-4 text-left text-sm font-semibold text-gray-900"
               >
-                <span className="flex-1 text-[13px]">{`${idx + 1}. ${
-                  item.q
-                }`}</span>
-                <span className="ml-4 text-xs">
-                  {open ? "−" : "+"}
+                <span className="flex-1 text-[13px]">
+                  {idx + 1}. {item.q}
                 </span>
+                <span className="ml-4 text-xs">{open ? "−" : "+"}</span>
               </button>
               {open && (
                 <div className="px-6 pb-4 text-[12px] leading-relaxed text-gray-600">
@@ -392,7 +385,7 @@ function CTASection() {
               alt="Consultant"
               className="hidden h-28 w-28 rounded-3xl object-cover md:block"
             />
-            <div className="max-w-xl text-gray-900">
+          <div className="max-w-xl text-gray-900">
               <p className="text-xs font-semibold uppercase tracking-[0.3em]">
                 Looking For Professional
               </p>
