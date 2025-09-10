@@ -1,52 +1,52 @@
-// ServiceDetailsPage.jsx
+// WebDevelopmentPage.jsx
 import React, { useState } from "react";
 
-export default function ServiceDetailsPage() {
+export default function WebDevelopmentPage() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Header />
       <Hero />
-      <ServiceContent />
+      <MainSection />
       <CTASection />
       <Footer />
     </div>
   );
 }
 
-/* ---------------- HEADER / NAVBAR ---------------- */
+/* ---------------- HEADER ---------------- */
 
 function Header() {
+  const menu = ["Home", "Pages", "Services", "Projects", "Blog", "Contact"];
+
   return (
     <header className="sticky top-0 z-40 bg-gradient-to-b from-gray-900/95 to-gray-900/75 text-white backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
-        {/* Logo */}
+        {/* logo */}
         <div className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-400 font-bold text-gray-900">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-400 text-sm font-bold text-gray-900">
             DP
           </div>
-          <p className="text-lg font-semibold">DigiPlus</p>
+          <span className="text-lg font-semibold">DigiPlus</span>
         </div>
 
-        {/* Menu */}
-        <nav className="hidden gap-6 text-sm font-medium md:flex">
-          {["Home", "Pages", "Services", "Projects", "Blog", "Contact"].map(
-            (item) => (
-              <a
-                key={item}
-                href="#"
-                className={`transition ${
-                  item === "Services"
-                    ? "text-yellow-400"
-                    : "hover:text-yellow-400"
-                }`}
-              >
-                {item}
-              </a>
-            )
-          )}
+        {/* nav */}
+        <nav className="hidden items-center gap-6 text-sm md:flex">
+          {menu.map((item) => (
+            <a
+              key={item}
+              href="#"
+              className={`transition ${
+                item === "Services"
+                  ? "text-yellow-400"
+                  : "hover:text-yellow-400"
+              }`}
+            >
+              {item}
+            </a>
+          ))}
         </nav>
 
-        {/* Call */}
+        {/* call + menu */}
         <div className="hidden items-center gap-4 md:flex">
           <div className="flex items-center gap-2 text-xs text-gray-200">
             <div className="flex h-9 w-9 items-center justify-center rounded-full bg-yellow-400/10">
@@ -64,7 +64,7 @@ function Header() {
           </button>
         </div>
 
-        <button className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 md:hidden">
+        <button className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm md:hidden">
           ☰
         </button>
       </div>
@@ -78,7 +78,7 @@ function Hero() {
   return (
     <section className="relative overflow-hidden bg-gray-900">
       <img
-        src="/img/services-hero-bg.jpg"
+        src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project3.jpg"
         alt="Hero"
         className="absolute inset-0 h-full w-full object-cover"
       />
@@ -93,9 +93,9 @@ function Hero() {
   );
 }
 
-/* ---------------- MAIN SERVICE CONTENT ---------------- */
+/* ---------------- MAIN 3-COL GRID ---------------- */
 
-function ServiceContent() {
+function MainSection() {
   const serviceList = [
     "Web Development",
     "UI/UX Design",
@@ -107,10 +107,10 @@ function ServiceContent() {
 
   return (
     <section className="bg-white py-16 md:py-20">
-      <div className="mx-auto max-w-6xl space-y-10 px-4 md:px-6 lg:px-8">
-        {/* --------- ROW 1: Service list (left) + big image (right) --------- */}
-        <div className="grid gap-8 lg:grid-cols-[0.9fr,2.1fr]">
-          {/* Service List card */}
+      <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8 space-y-10">
+        {/* same grid for row1 + row2, 3 columns on lg */}
+        <div className="grid gap-8 lg:grid-cols-3">
+          {/* ROW 1 - LEFT: SERVICE LIST (col 1) */}
           <div className="rounded-3xl bg-white p-6 shadow-[0_20px_40px_rgba(15,23,42,0.08)]">
             <h3 className="mb-4 text-sm font-semibold text-gray-900">
               Service List
@@ -123,7 +123,7 @@ function ServiceContent() {
                     key={item}
                     className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-[13px] ${
                       active
-                        ? "bg-yellow-400 text-gray-900 font-semibold"
+                        ? "bg-yellow-400 font-semibold text-gray-900"
                         : "bg-gray-50 text-gray-700 hover:bg-gray-100"
                     }`}
                   >
@@ -135,21 +135,18 @@ function ServiceContent() {
             </div>
           </div>
 
-          {/* Big image */}
-          <div className="overflow-hidden rounded-3xl shadow-[0_20px_40px_rgba(15,23,42,0.10)]">
+          {/* ROW 1 - RIGHT: BIG IMAGE (col 2+3) */}
+          <div className="lg:col-span-2 overflow-hidden rounded-3xl shadow-[0_20px_40px_rgba(15,23,42,0.10)]">
             <img
-              src="/img/service-main.jpg"
-              alt="Web development team"
+              src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project3.jpg"
+              alt="Team"
               className="h-[320px] w-full object-cover md:h-[360px]"
             />
           </div>
-        </div>
 
-        {/* --------- ROW 2: left (help + form) / right (text + two images) --------- */}
-        <div className="grid gap-8 lg:grid-cols-[0.9fr,2.1fr]">
-          {/* LEFT COLUMN: Help card + form */}
+          {/* ROW 2 - LEFT: HELP CARD + FORM (col 1) */}
           <div className="space-y-6">
-            {/* Help card */}
+            {/* help card */}
             <div className="overflow-hidden rounded-3xl bg-gray-900 text-white shadow-[0_20px_40px_rgba(15,23,42,0.18)]">
               <div className="h-40 w-full overflow-hidden">
                 <img
@@ -158,24 +155,20 @@ function ServiceContent() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="space-y-4 px-6 py-6 text-center">
+              <div className="px-6 py-6 text-center space-y-3">
                 <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-yellow-400 text-gray-900">
                   💬
                 </div>
-                <div className="space-y-1 text-xs">
-                  <p className="font-semibold text-white">
-                    Need help? Talk to expert
-                  </p>
+                <div className="text-xs space-y-1">
+                  <p className="font-semibold">Need help? Talk to expert</p>
                   <p className="text-gray-300">
-                    Contact with us for any
-                    <br />
-                    advice
+                    Contact with us for any advice
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* More services form */}
+            {/* form */}
             <div className="rounded-3xl bg-white p-6 shadow-[0_20px_40px_rgba(15,23,42,0.08)]">
               <h3 className="mb-4 text-sm font-semibold text-gray-900">
                 More Services
@@ -196,8 +189,8 @@ function ServiceContent() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: text + images */}
-          <div className="space-y-8">
+          {/* ROW 2 - RIGHT: TEXT + 2 IMAGES (col 2+3) */}
+          <div className="lg:col-span-2 space-y-8">
             {/* text */}
             <div className="space-y-5 text-sm leading-relaxed text-gray-600 md:text-[15px]">
               <p className="text-xs text-gray-500">
@@ -235,7 +228,7 @@ function ServiceContent() {
               </div>
             </div>
 
-            {/* two images like screenshot */}
+            {/* two images */}
             <div className="grid gap-5 md:grid-cols-2">
               <img
                 src="/img/service-sub-1.jpg"
@@ -251,11 +244,9 @@ function ServiceContent() {
           </div>
         </div>
 
-        {/* --------- FULL WIDTH: Service Process + FAQ --------- */}
-        <div className="space-y-10">
-          <ServiceProcess />
-          <FAQSection />
-        </div>
+        {/* নিচে full-width অংশ */}
+        <ServiceProcess />
+        <FAQSection />
       </div>
     </section>
   );
@@ -316,7 +307,7 @@ function ServiceProcess() {
   );
 }
 
-/* ---------------- FAQ SECTION ---------------- */
+/* ---------------- FAQ ---------------- */
 
 const faqItems = [
   {
@@ -347,7 +338,7 @@ function FAQSection() {
       </h3>
       <div className="rounded-2xl border border-gray-100 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
         {faqItems.map((item, idx) => {
-          const open = openIndex === idx;
+          const open = idx === openIndex;
           return (
             <div key={item.q} className="border-b last:border-none">
               <button
@@ -372,20 +363,20 @@ function FAQSection() {
   );
 }
 
-/* ---------------- CTA SECTION ---------------- */
+/* ---------------- CTA ---------------- */
 
 function CTASection() {
   return (
     <section className="bg-gray-900 pb-16 pt-10">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-3xl bg-gradient-to-r from-yellow-400 to-yellow-300 p-6 md:flex md:items-center md:justify-between md:p-10">
+        <div className="flex flex-col items-center justify-between gap-6 overflow-hidden rounded-3xl bg-gradient-to-r from-yellow-400 to-yellow-300 p-6 md:flex-row md:p-10">
           <div className="flex items-center gap-6">
             <img
               src="/img/cta-person.jpg"
               alt="Consultant"
               className="hidden h-28 w-28 rounded-3xl object-cover md:block"
             />
-          <div className="max-w-xl text-gray-900">
+            <div className="max-w-xl text-gray-900">
               <p className="text-xs font-semibold uppercase tracking-[0.3em]">
                 Looking For Professional
               </p>
@@ -394,7 +385,7 @@ function CTASection() {
               </h3>
             </div>
           </div>
-          <button className="mt-6 rounded-full bg-gray-900 px-6 py-3 text-xs font-semibold text-white md:mt-0">
+          <button className="rounded-full bg-gray-900 px-6 py-3 text-xs font-semibold text-white">
             GET STARTED FREE
           </button>
         </div>
@@ -410,7 +401,7 @@ function Footer() {
     <footer className="bg-gray-900 pb-10 pt-10 text-gray-300">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <div className="grid gap-8 text-xs md:grid-cols-4">
-          {/* Logo column */}
+          {/* logo column */}
           <div>
             <div className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-yellow-400 font-bold text-gray-900">
