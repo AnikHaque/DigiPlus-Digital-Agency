@@ -78,7 +78,7 @@ function Hero() {
   return (
     <section className="relative overflow-hidden bg-gray-900">
       <img
-        src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project3.jpg"
+        src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5.jpg"
         alt="Hero"
         className="absolute inset-0 h-full w-full object-cover"
       />
