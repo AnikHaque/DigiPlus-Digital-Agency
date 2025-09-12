@@ -150,7 +150,7 @@ function MainSection() {
             <div className="overflow-hidden rounded-3xl bg-gray-900 text-white shadow-[0_20px_40px_rgba(15,23,42,0.18)]">
               <div className="h-40 w-full overflow-hidden">
                 <img
-                  src="/img/service-help.jpg"
+                  src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/service9.jpg"
                   alt="Help"
                   className="h-full w-full object-cover"
                 />
@@ -231,12 +231,12 @@ function MainSection() {
             {/* two images */}
             <div className="grid gap-5 md:grid-cols-2">
               <img
-                src="/img/service-sub-1.jpg"
+                src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/page-title1-672x448.jpg"
                 alt="Sub 1"
                 className="h-[220px] w-full rounded-2xl object-cover"
               />
               <img
-                src="/img/service-sub-2.jpg"
+                src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project4-1024x683.jpg"
                 alt="Sub 2"
                 className="h-[220px] w-full rounded-2xl object-cover"
               />
@@ -367,12 +367,12 @@ function FAQSection() {
 
 function CTASection() {
   return (
-    <section className="bg-gray-900 pb-16 pt-10">
+    <section className="bg-gray-900 pb-16 pt-16">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-6 overflow-hidden rounded-3xl bg-gradient-to-r from-yellow-400 to-yellow-300 p-6 md:flex-row md:p-10">
           <div className="flex items-center gap-6">
             <img
-              src="/img/cta-person.jpg"
+              src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/women.png"
               alt="Consultant"
               className="hidden h-28 w-28 rounded-3xl object-cover md:block"
             />
