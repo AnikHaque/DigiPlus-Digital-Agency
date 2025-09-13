@@ -1,4 +1,14 @@
+import { ProcessItem } from "./WorkProccess";
+
 export function StatsSection() {
+
+  const stats = [
+  { value: "8K", label: "Project Delivered" },
+  { value: "10K", label: "Active Clients" },
+  { value: "7K+", label: "Positive Feedback" },
+  { value: "25", label: "Team Members" },
+];
+
   return (
     <section className="bg-gray-900 py-16 text-white md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">

@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 
-import LandingPage from "./components/LandingPage";
 import Layout from "./Layout/MainLayout";
 import TeamPage from "./components/TeamPage";
 import TeamDetailsPage from "./components/TeamDetails";
@@ -15,6 +14,7 @@ import PricingPage from "./pages/PricingPage";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicePage";
 import ServiceDetailsPage from "./pages/ServiceDetailsPage";
+import HomePage from "./pages/HomePage";
 
 
 export default function App() {
@@ -23,7 +23,7 @@ export default function App() {
       {/* Wrap all pages with Layout */}
       <Route element={<Layout />}>
        
-         <Route path="/" element={<LandingPage />} />
+         <Route path="/" element={<HomePage />} />
          <Route path="/test" element={<LandingPage2 />} />
          <Route path="/about" element={<AboutPage />} />
          <Route path="/team" element={<TeamPage />} />

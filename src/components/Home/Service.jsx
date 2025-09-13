@@ -1,4 +1,28 @@
 export function Services() {
+  
+  const services = [
+  {
+    title: "Branding & Creative Design",
+    desc: "Build a consistent brand identity with design that stands out.",
+    icon: "🎨",
+  },
+  {
+    title: "Website Design & UX/UI",
+    desc: "Modern, responsive and user-friendly website experiences.",
+    icon: "💻",
+  },
+  {
+    title: "Corporate Presentation",
+    desc: "Communicate your ideas with stunning slide decks.",
+    icon: "📊",
+  },
+  {
+    title: "Advertisement & Campaign",
+    desc: "Strategic campaigns that grow your business.",
+    icon: "📣",
+  },
+];
+
   return (
     <section className="bg-gray-50 py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">

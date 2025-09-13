@@ -1,4 +1,14 @@
 export function Portfolio() {
+
+  const portfolioImages = [
+  "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project2-1100x1100.jpg",
+  "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project2-1100x1100.jpg",
+  "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project2-1100x1100.jpg",
+  "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project2-1100x1100.jpg",
+  "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project2-1100x1100.jpg",
+  "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project2-1100x1100.jpg",
+];
+
   return (
     <section className="bg-white py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
