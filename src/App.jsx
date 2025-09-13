@@ -14,6 +14,7 @@ import BlogPage from "./components/BlogPage";
 import BlogDetailsPage from "./components/BlogDetails";
 import ContactPage from "./components/ContactPage";
 import ServiceDetailsPage from "./components/ServiceDetails";
+import LandingPage2 from "./components/LandingPage2";
 
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
       <Route element={<Layout />}>
        
          <Route path="/" element={<LandingPage />} />
+         <Route path="/test" element={<LandingPage2 />} />
          <Route path="/about" element={<AboutPage />} />
          <Route path="/team" element={<TeamPage />} />
          <Route path="/pricing" element={<PricingPage />} />

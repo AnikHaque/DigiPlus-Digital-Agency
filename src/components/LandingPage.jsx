@@ -93,17 +93,17 @@ const testimonials = [
 const blogPosts = [
   {
     title: "Why Brand Consistency Is Essential In Every Business",
-    image: "/img/blog-1.jpg",
+    image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5-672x448.jpg",
     date: "Sep 21, 2024",
   },
   {
     title: "How A/B Testing Can Improve Your Web Conversions",
-    image: "/img/blog-2.jpg",
+    image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project4-672x448.jpg",
     date: "Sep 18, 2024",
   },
   {
     title: "Effective Marketing Strategies For Remote Brands",
-    image: "/img/blog-3.jpg",
+    image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/slider5-672x448.jpg",
     date: "Sep 13, 2024",
   },
 ];
@@ -128,9 +128,8 @@ export default function LandingPage() {
         <Portfolio />
         <Process />
         <Testimonials />
-        <ClientLogos />
-        <ContactAndCTA />
         <Blog />
+        <ContactAndCTA />
       </main>
       <Footer />
     </div>
@@ -338,15 +337,15 @@ function About() {
         <div className="grid w-full gap-4 md:w-1/2">
           <div className="overflow-hidden rounded-3xl">
             <img
-              src="/img/about-1.jpg"
+              src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/05/About-1.jpg"
               alt="Team at work"
-              className="h-full w-full object-cover"
+              className="h-80 w-full object-cover"
             />
           </div>
           <div className="flex gap-4">
             <div className="h-32 flex-1 overflow-hidden rounded-3xl">
               <img
-                src="/img/about-2.jpg"
+                src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/05/About2.jpg"
                 alt="Creative discussion"
                 className="h-full w-full object-cover"
               />
@@ -362,7 +361,7 @@ function About() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 mt-5">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-amber-500">
             About agency
           </p>
@@ -630,7 +629,7 @@ function Testimonials() {
             <span className="h-[2px] w-12 bg-amber-500" />
           </div>
 
-          <h2 className="mt-4 text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
             What They&apos;re Talking
             <br />
             About Us?
@@ -744,13 +743,7 @@ function ContactAndCTA() {
   return (
     <section className="bg-white py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
-        {/* Small stats row */}
-        <div className="mb-10 grid gap-6 md:grid-cols-3">
-          <SmallStat label="Projects Completed" value="900+" />
-          <SmallStat label="Happy Clients" value="1.2K" />
-          <SmallStat label="Awards & Mentions" value="30+" />
-        </div>
-
+       
         {/* Contact + simple graphic */}
         <div className="grid gap-8 md:grid-cols-[3fr,2fr]">
           <div className="rounded-3xl bg-gray-50 p-6 md:p-8">
@@ -811,12 +804,6 @@ function ContactAndCTA() {
             </form>
           </div>
 
-          <div className="flex items-center justify-center">
-            <div className="relative h-72 w-52 rounded-[3rem] bg-amber-100">
-              <div className="absolute inset-x-6 bottom-6 h-40 rounded-[2rem] bg-amber-400/60" />
-              <div className="absolute -right-10 bottom-4 h-20 w-20 rounded-3xl bg-amber-400/20" />
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -836,7 +823,7 @@ function SmallStat({ label, value }) {
 
 function Blog() {
   return (
-    <section className="bg-gray-50 py-16 md:py-20">
+    <section className="bg-gray-900 text-white py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
