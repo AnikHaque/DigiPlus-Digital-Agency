@@ -10,11 +10,11 @@ import ProjectsPage from "./components/ProjectsPage";
 import BlogPage from "./components/BlogPage";
 import BlogDetailsPage from "./components/BlogDetails";
 import ContactPage from "./components/ContactPage";
-import ServiceDetailsPage from "./components/ServiceDetails";
 import LandingPage2 from "./components/LandingPage2";
 import PricingPage from "./pages/PricingPage";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicePage";
+import ServiceDetailsPage from "./pages/ServiceDetailsPage";
 
 
 export default function App() {
