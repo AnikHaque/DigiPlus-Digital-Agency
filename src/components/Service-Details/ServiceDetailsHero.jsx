@@ -1,0 +1,18 @@
+export function ServiceDetailsHero() {
+  return (
+    <section className="relative overflow-hidden bg-gray-900">
+      <img
+        src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5.jpg"
+        alt="Hero"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/70 to-yellow-500/60" />
+      <div className="relative mx-auto max-w-6xl px-4 py-20 text-white md:px-6 lg:px-8 lg:py-24">
+        <h1 className="text-3xl font-bold md:text-[32px] text-center">Web Development</h1>
+        <p className="mt-3 text-xs text-gray-200 md:text-sm text-center">
+          Home <span className="mx-1">›</span> Web Development
+        </p>
+      </div>
+    </section>
+  );
+}
