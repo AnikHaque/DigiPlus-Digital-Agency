@@ -1,4 +1,12 @@
 export function AboutService() {
+    
+    const serviceLines = [
+  "Brand Identity",
+  "UX / UI Design",
+  "App Agency",
+  "Digital Marketing",
+];
+
   return (
     <section
   className=" py-16 md:py-20 bg-[url('https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/How-it-work2.jpg')] bg-cover bg-center bg-no-repeat"

@@ -1,4 +1,26 @@
 export function HowWeWork() {
+
+    const processSteps = [
+  {
+    step: "01",
+    title: "Project Planning",
+    items: ["Project Research", "Competitive Analysis", "Define Flow"],
+    image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/Shape-3.png", // 3D object image
+  },
+  {
+    step: "02",
+    title: "Development",
+    items: ["Project Development", "Execution", "Error Fixing"],
+    image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/Shape-1.png",
+  },
+  {
+    step: "03",
+    title: "Quick Support",
+    items: ["Quality assurance", "Launch Product", "Maintenance"],
+    image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/Shape-2.png",
+  },
+];
+
   return (
     <section className="bg-gray-900 py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
