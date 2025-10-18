@@ -1,5 +1,14 @@
 export function PricingCard({ plan }) {
+    
   const { name, price, period, description, featured, badge } = plan;
+
+  const features = [
+  "Unlimited features",
+  "Multi language content",
+  "30 Days free trial features",
+  "Data backup and recovery",
+  "Updates via dashboard & slack",
+];
 
   return (
     <div

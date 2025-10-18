@@ -5,7 +5,6 @@ import Layout from "./Layout/MainLayout";
 import AboutPage from "./components/AboutPage";
 import TeamPage from "./components/TeamPage";
 import TeamDetailsPage from "./components/TeamDetails";
-import PricingPage from "./components/PricingPage";
 import FaqPage from "./components/FaqPage";
 import ProjectDetailsPage from "./components/ProjectDetails";
 import ProjectsPage from "./components/ProjectsPage";
@@ -15,6 +14,7 @@ import BlogDetailsPage from "./components/BlogDetails";
 import ContactPage from "./components/ContactPage";
 import ServiceDetailsPage from "./components/ServiceDetails";
 import LandingPage2 from "./components/LandingPage2";
+import PricingPage from "./pages/PricingPage";
 
 
 export default function App() {
