@@ -69,7 +69,7 @@ function FaqHero() {
     <section className="relative overflow-hidden bg-gray-900">
       <div className="absolute inset-0">
         <img
-          src="/img/faq-hero-bg.jpg" // hero bg
+          src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5.jpg" 
           alt="FAQ hero"
           className="h-full w-full object-cover"
         />
