@@ -24,7 +24,7 @@ function TeamDetailsHero() {
       {/* BG image */}
       <div className="absolute inset-0">
         <img
-          src="/img/team-hero-bg.jpg" 
+          src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5.jpg" 
           alt="Team"
           className="h-full w-full object-cover"
         />
