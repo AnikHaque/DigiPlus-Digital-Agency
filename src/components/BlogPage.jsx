@@ -138,7 +138,7 @@ function BlogHero() {
     <section className="relative overflow-hidden bg-gray-900">
       <div className="absolute inset-0">
         <img
-          src="/img/blog-hero-bg.jpg" // hero background
+          src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5.jpg" 
           alt="Blog hero"
           className="h-full w-full object-cover"
         />
