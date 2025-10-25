@@ -32,7 +32,7 @@ function ProjectsHero() {
     <section className="relative overflow-hidden bg-gray-900">
       <div className="absolute inset-0">
         <img
-          src="/img/projects-hero-bg.jpg" // change to your hero bg
+          src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5.jpg" // change to your hero bg
           alt="Projects hero"
           className="h-full w-full object-cover"
         />

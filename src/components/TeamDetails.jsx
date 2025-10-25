@@ -24,7 +24,7 @@ function TeamDetailsHero() {
       {/* BG image */}
       <div className="absolute inset-0">
         <img
-          src="/img/team-hero-bg.jpg" // your hero bg
+          src="/img/team-hero-bg.jpg" 
           alt="Team"
           className="h-full w-full object-cover"
         />
