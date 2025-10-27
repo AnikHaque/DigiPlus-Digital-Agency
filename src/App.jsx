@@ -6,6 +6,7 @@ import AboutPage from "./components/AboutPage";
 import TeamPage from "./components/TeamPage";
 import TeamDetailsPage from "./components/TeamDetails";
 import PricingPage from "./components/PricingPage";
+import FaqPage from "./components/FaqPage";
 
 
 export default function App() {
@@ -17,7 +18,8 @@ export default function App() {
          <Route path="/" element={<LandingPage />} />
          <Route path="/about" element={<AboutPage />} />
          <Route path="/team" element={<TeamPage />} />
-          <Route path="/pricing" element={<PricingPage />} />
+         <Route path="/pricing" element={<PricingPage />} />
+         <Route path="/faq" element={<FaqPage />} />
         <Route path="/team-details" element={<TeamDetailsPage />} />
       </Route>
     </Routes>
