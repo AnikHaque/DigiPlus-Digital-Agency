@@ -202,7 +202,7 @@ function FaqColumn({ items, defaultOpenIndex = 0 }) {
 
 function CTASection() {
   return (
-    <section className="bg-gray-900 pb-16">
+    <section className="bg-gray-900 pb-16 pt-16">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <div className="overflow-hidden rounded-3xl bg-gradient-to-r from-yellow-400 to-yellow-300 p-6 md:flex md:items-center md:justify-between md:p-10">
           <div className="flex items-center gap-6">
