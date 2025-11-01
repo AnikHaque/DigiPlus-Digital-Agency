@@ -1,9 +1,7 @@
-// TeamPage.jsx
-import React from "react";
+
 import { Header } from "./shared/Header";
 import { Footer } from "./shared/Footer";
 
-/* ---------- DATA ---------- */
 
 const teamMembers = [
   {
