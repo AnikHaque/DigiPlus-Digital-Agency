@@ -12,6 +12,7 @@ import ProjectsPage from "./components/ProjectsPage";
 import ServicesPage from "./components/ServicePage";
 import BlogPage from "./components/BlogPage";
 import BlogDetailsPage from "./components/BlogDetails";
+import ContactPage from "./components/ContactPage";
 
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
            <Route path="/blog-details" element={<BlogDetailsPage />} />
          <Route path="/project-details" element={<ProjectDetailsPage />} />
          <Route path="/faq" element={<FaqPage />} />
+         <Route path="/contact" element={<ContactPage />} />
         <Route path="/team-details" element={<TeamDetailsPage />} />
       </Route>
     </Routes>
