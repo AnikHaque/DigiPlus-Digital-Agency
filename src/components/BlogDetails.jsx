@@ -323,17 +323,17 @@ function MainSection() {
                 <SidebarPostItem
                   title="Web Development Essentials Every Business"
                   date="June 3, 2025"
-                  image="/img/sidebar-1.jpg"
+                  image="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5-300x300.jpg"
                 />
                 <SidebarPostItem
                   title="Top Crypto Exchange influencers in china"
                   date="June 1, 2025"
-                  image="/img/sidebar-2.jpg"
+                  image="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5-300x300.jpg"
                 />
                 <SidebarPostItem
                   title="Necessity may give us best virtual court"
                   date="June 1, 2025"
-                  image="/img/sidebar-3.jpg"
+                  image="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5-300x300.jpg"
                 />
               </div>
             </div>
@@ -404,13 +404,13 @@ function SidebarPostItem({ title, date, image }) {
 
 function CTASection() {
   return (
-    <section className="bg-gray-900 pb-16">
+    <section className="bg-gray-900 pb-16 pt-16">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <div className="overflow-hidden rounded-3xl bg-gradient-to-r from-yellow-400 to-yellow-300 p-6 md:flex md:items-center md:justify-between md:p-10">
           <div className="flex items-center gap-6">
             <div className="hidden h-28 w-28 overflow-hidden rounded-3xl bg-yellow-200 md:block">
               <img
-                src="/img/cta-person.jpg"
+                src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/women.png"
                 alt="Business consultant"
                 className="h-full w-full object-cover"
               />
