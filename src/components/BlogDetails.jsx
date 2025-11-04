@@ -192,14 +192,14 @@ function MainSection() {
             <div className="grid gap-5 md:grid-cols-2">
               <div className="overflow-hidden rounded-2xl">
                 <img
-                  src="/img/blog-details-sub-1.jpg"
+                  src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project4.jpg"
                   alt="Sub 1"
                   className="h-[220px] w-full object-cover"
                 />
               </div>
               <div className="overflow-hidden rounded-2xl">
                 <img
-                  src="/img/blog-details-sub-2.jpg"
+                  src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project3-1536x1024.jpg"
                   alt="Sub 2"
                   className="h-[220px] w-full object-cover"
                 />
