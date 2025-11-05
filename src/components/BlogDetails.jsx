@@ -119,7 +119,7 @@ function MainSection() {
             {/* Main image */}
             <div className="overflow-hidden rounded-2xl shadow-[0_20px_40px_rgba(15,23,42,0.12)]">
               <img
-                src="/img/blog-details-main.jpg"
+                src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5-1536x1024.jpg"
                 alt="Main"
                 className="h-[330px] w-full object-cover md:h-[360px]"
               />
