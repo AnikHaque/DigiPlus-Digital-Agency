@@ -88,12 +88,12 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/70 to-yellow-500/60" />
 
       <div className="relative mx-auto max-w-6xl px-4 py-20 text-white md:px-6 lg:px-8 lg:py-24">
-        <h1 className="text-3xl font-bold leading-tight md:text-[32px]">
+        <h1 className="text-3xl font-bold leading-tight md:text-[32px] text-center">
           Web Development Essentials Every
           <br />
           Business
         </h1>
-        <p className="mt-3 text-xs text-gray-200 md:text-sm">
+        <p className="mt-3 text-xs text-gray-200 md:text-sm text-center">
           Home <span className="mx-1">›</span> Blog <span className="mx-1">›</span>{" "}
           2025 <span className="mx-1">›</span> June <span className="mx-1">›</span>{" "}
           3 <span className="mx-1">›</span>{" "}
