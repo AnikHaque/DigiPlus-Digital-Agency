@@ -11,6 +11,7 @@ import ProjectDetailsPage from "./components/ProjectDetails";
 import ProjectsPage from "./components/ProjectsPage";
 import ServicesPage from "./components/ServicePage";
 import BlogPage from "./components/BlogPage";
+import BlogDetailsPage from "./components/BlogDetails";
 
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
          <Route path="/project" element={<ProjectsPage />} />
           <Route path="/service" element={<ServicesPage />} />
           <Route path="/blog" element={<BlogPage />} />
+           <Route path="/blog-details" element={<BlogDetailsPage />} />
          <Route path="/project-details" element={<ProjectDetailsPage />} />
          <Route path="/faq" element={<FaqPage />} />
         <Route path="/team-details" element={<TeamDetailsPage />} />
