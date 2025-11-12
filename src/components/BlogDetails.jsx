@@ -5,15 +5,15 @@ export default function BlogDetailsPage() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Header />
-      <PostHero />
-      <PostSection />
+      <Hero />
+      <MainSection />
       <CTASection />
       <Footer />
     </div>
   );
 }
 
-/* ============== HEADER ============== */
+/* ---------------- HEADER ---------------- */
 
 function Header() {
   return (
@@ -75,26 +75,24 @@ function Header() {
   );
 }
 
-/* ============== HERO ============== */
+/* ---------------- HERO ---------------- */
 
-function PostHero() {
+function Hero() {
   return (
     <section className="relative overflow-hidden bg-gray-900">
-      <div className="absolute inset-0">
-        <img
-          src="/img/blog-hero-bg.jpg"
-          alt="Blog hero"
-          className="h-full w-full object-cover"
-        />
-      </div>
+      <img
+        src="/img/blog-hero-bg.jpg"
+        alt="Blog hero"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/70 to-yellow-500/60" />
+
       <div className="relative mx-auto max-w-6xl px-4 py-20 text-white md:px-6 lg:px-8 lg:py-24">
         <h1 className="text-3xl font-bold leading-tight md:text-[32px]">
           Web Development Essentials Every
           <br />
           Business
         </h1>
-
         <p className="mt-3 text-xs text-gray-200 md:text-sm">
           Home <span className="mx-1">›</span> Blog <span className="mx-1">›</span>{" "}
           2025 <span className="mx-1">›</span> June <span className="mx-1">›</span>{" "}
@@ -108,17 +106,17 @@ function PostHero() {
   );
 }
 
-/* ============== MAIN SECTION (LEFT / RIGHT) ============== */
+/* ---------------- MAIN (LEFT / RIGHT) ---------------- */
 
-function PostSection() {
+function MainSection() {
   return (
-    <section className="bg-white py-16 md:py-20">
+    <main className="bg-white py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
-        {/* LEFT ARTICLE + RIGHT SIDEBAR */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[2.1fr,1fr]">
-          {/* ------------ LEFT: ARTICLE ------------ */}
-          <div className="space-y-8">
-            {/* main image */}
+        {/* lg: 3 column grid, left takes 2, right takes 1 */}
+        <div className="grid gap-10 lg:grid-cols-3">
+          {/* LEFT COLUMN */}
+          <div className="space-y-8 lg:col-span-2">
+            {/* Main image */}
             <div className="overflow-hidden rounded-2xl shadow-[0_20px_40px_rgba(15,23,42,0.12)]">
               <img
                 src="/img/blog-details-main.jpg"
@@ -127,7 +125,7 @@ function PostSection() {
               />
             </div>
 
-            {/* article text */}
+            {/* Article */}
             <article className="space-y-6 text-sm leading-relaxed text-gray-600 md:text-[15px]">
               <div>
                 <h2 className="text-lg font-semibold text-gray-900">
@@ -152,7 +150,7 @@ function PostSection() {
                 </p>
               </div>
 
-              {/* quote */}
+              {/* Quote */}
               <div className="rounded-2xl bg-gray-50 px-6 py-5 text-sm leading-relaxed text-gray-700">
                 <p>
                   “We can easily manage it if we will only take each day, the
@@ -169,7 +167,7 @@ function PostSection() {
                 </div>
               </div>
 
-              {/* second heading */}
+              {/* Second heading */}
               <div>
                 <h2 className="text-lg font-semibold text-gray-900">
                   We focus on the solutions not on the problems
@@ -190,7 +188,7 @@ function PostSection() {
               </div>
             </article>
 
-            {/* two images */}
+            {/* Two images */}
             <div className="grid gap-5 md:grid-cols-2">
               <div className="overflow-hidden rounded-2xl">
                 <img
@@ -208,7 +206,7 @@ function PostSection() {
               </div>
             </div>
 
-            {/* latest news more information list */}
+            {/* Latest News more information (inside article) */}
             <section>
               <h3 className="text-lg font-semibold text-gray-900">
                 Latest News more Information
@@ -237,7 +235,7 @@ function PostSection() {
                 </li>
               </ul>
 
-              {/* posted in / tags row */}
+              {/* Posted in / Tags */}
               <div className="mt-6 flex flex-col gap-3 border-t border-gray-100 pt-4 text-xs text-gray-700 md:flex-row md:items-center md:justify-between">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-gray-900">Posted in</span>
@@ -254,7 +252,7 @@ function PostSection() {
               </div>
             </section>
 
-            {/* comment form */}
+            {/* Comment form */}
             <section>
               <h3 className="text-lg font-semibold text-gray-900">
                 Leave A Comment
@@ -301,9 +299,9 @@ function PostSection() {
             </section>
           </div>
 
-          {/* ------------ RIGHT: SIDEBAR ------------ */}
+          {/* RIGHT COLUMN (SIDEBAR) */}
           <aside className="space-y-8">
-            {/* search */}
+            {/* Search */}
             <div className="rounded-2xl bg-gray-50 p-5 shadow-[0_16px_32px_rgba(15,23,42,0.06)]">
               <div className="flex items-center gap-2">
                 <input
@@ -316,7 +314,7 @@ function PostSection() {
               </div>
             </div>
 
-            {/* latest news */}
+            {/* Latest News (SIDEBAR) */}
             <div className="rounded-2xl bg-gray-50 p-5 shadow-[0_16px_32px_rgba(15,23,42,0.06)]">
               <h4 className="text-sm font-semibold text-gray-900">
                 Latest News
@@ -340,7 +338,7 @@ function PostSection() {
               </div>
             </div>
 
-            {/* categories */}
+            {/* Categories */}
             <div className="rounded-2xl bg-gray-50 p-5 shadow-[0_16px_32px_rgba(15,23,42,0.06)]">
               <h4 className="text-sm font-semibold text-gray-900">
                 Categories
@@ -362,7 +360,7 @@ function PostSection() {
               </ul>
             </div>
 
-            {/* tags */}
+            {/* Tags */}
             <div className="rounded-2xl bg-gray-50 p-5 shadow-[0_16px_32px_rgba(15,23,42,0.06)]">
               <h4 className="text-sm font-semibold text-gray-900">Tag</h4>
               <div className="mt-4 flex flex-wrap gap-2 text-[11px]">
@@ -381,11 +379,11 @@ function PostSection() {
           </aside>
         </div>
       </div>
-    </section>
+    </main>
   );
 }
 
-/* small sidebar item */
+/* sidebar item component */
 function SidebarPostItem({ title, date, image }) {
   return (
     <div className="flex gap-3">
@@ -402,7 +400,7 @@ function SidebarPostItem({ title, date, image }) {
   );
 }
 
-/* ============== CTA ============== */
+/* ---------------- CTA ---------------- */
 
 function CTASection() {
   return (
@@ -437,14 +435,14 @@ function CTASection() {
   );
 }
 
-/* ============== FOOTER ============== */
+/* ---------------- FOOTER ---------------- */
 
 function Footer() {
   return (
     <footer className="bg-gray-900 pb-10 pt-10 text-gray-300">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <div className="grid gap-8 text-sm md:grid-cols-4">
-          {/* logo + text */}
+          {/* Logo + text */}
           <div>
             <div className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-yellow-400 font-bold text-gray-900">
@@ -467,7 +465,7 @@ function Footer() {
             </div>
           </div>
 
-          {/* quick link */}
+          {/* Quick Link */}
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
               Quick Link
@@ -480,7 +478,7 @@ function Footer() {
             </div>
           </div>
 
-          {/* company */}
+          {/* Company */}
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
               Company
@@ -493,7 +491,7 @@ function Footer() {
             </div>
           </div>
 
-          {/* contact */}
+          {/* Contact */}
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
               Contact
