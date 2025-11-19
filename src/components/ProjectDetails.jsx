@@ -158,10 +158,11 @@ function CTASection() {
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <div className="rounded-3xl bg-gradient-to-r from-yellow-400 to-yellow-300 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center gap-6">
-            <img
-              src="/img/cta-person.jpg"
-              className="hidden h-28 w-28 rounded-3xl object-cover md:block"
-            />
+           <img
+                src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/women.png"
+                alt="Business consultant"
+                className="h-full w-full object-cover"
+              />
             <div>
               <p className="text-xs uppercase tracking-[0.3em]">Need Help</p>
               <h3 className="mt-2 text-2xl font-bold text-gray-900">
