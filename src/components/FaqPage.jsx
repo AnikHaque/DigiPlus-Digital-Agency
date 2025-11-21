@@ -208,7 +208,7 @@ function CTASection() {
           <div className="flex items-center gap-6">
             <div className="hidden h-28 w-28 overflow-hidden rounded-3xl bg-yellow-200 md:block">
               <img
-                src="/img/cta-person.jpg"
+                src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/women.png"
                 alt="Business consultant"
                 className="h-full w-full object-cover"
               />
