@@ -124,7 +124,7 @@ function ServicesHero() {
       {/* background image */}
       <div className="absolute inset-0">
         <img
-          src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5.jpg" // same hero background style
+          src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project5.jpg" 
           alt="Services hero"
           className="h-full w-full object-cover"
         />
