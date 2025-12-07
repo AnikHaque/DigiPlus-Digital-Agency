@@ -36,22 +36,22 @@ const teamMembers = [
   {
     name: "Wade Warren",
     role: "UI Designer, Research",
-    avatar: "/img/team-1.jpg",
+    avatar: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/team-5.png",
   },
   {
     name: "Leslie Alexander",
     role: "UI Designer, Research",
-    avatar: "/img/team-2.jpg",
+    avatar: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/team-5.png",
   },
   {
     name: "Leslie Alexander",
     role: "UI Designer, Research",
-    avatar: "/img/team-3.jpg",
+    avatar: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/team-5.png",
   },
   {
     name: "Jenny Wilson",
     role: "UI Designer, Research",
-    avatar: "/img/team-4.jpg",
+    avatar: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/team-5.png",
   },
 ];
 
@@ -402,7 +402,7 @@ function TeamSection() {
 
 function CTASection() {
   return (
-    <section className="bg-gray-900 pb-16">
+    <section className="bg-gray-900 pb-16 pt-16">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <div className="overflow-hidden rounded-3xl bg-gradient-to-r from-yellow-400 to-yellow-300 p-6 md:flex md:items-center md:justify-between md:p-10">
           <div className="max-w-xl text-gray-900">
