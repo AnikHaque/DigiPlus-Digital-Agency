@@ -273,8 +273,7 @@ function HowWeWork() {
                     </li>
                   ))}
                 </ul>
-                {/* Placeholder for 3D object image */}
-                <div className="mt-6 h-20 rounded-3xl bg-black/40" />
+               
               </div>
             ))}
           </div>
@@ -288,7 +287,10 @@ function HowWeWork() {
 
 function ServiceLines() {
   return (
-    <section className="bg-gray-900 pb-16 pt-4 md:pb-20">
+    <section
+  className=" py-16 md:py-20 bg-[url('https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/How-it-work2.jpg')] bg-cover bg-center bg-no-repeat"
+>
+
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <div className="rounded-[2.5rem] bg-gradient-to-br from-[#151129] to-[#110d22] p-6 pt-10 md:p-10">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-yellow-400">
