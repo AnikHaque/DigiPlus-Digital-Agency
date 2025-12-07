@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import LandingPage from "./components/LandingPage";
 import Layout from "./Layout/MainLayout";
+import AboutPage from "./components/AboutPage";
 
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
       <Route element={<Layout />}>
        
          <Route path="/" element={<LandingPage />} />
+         <Route path="/about" element={<AboutPage />} />
         
       </Route>
     </Routes>
