@@ -4,6 +4,7 @@ import LandingPage from "./components/LandingPage";
 import Layout from "./Layout/MainLayout";
 import AboutPage from "./components/AboutPage";
 import TeamPage from "./components/TeamPage";
+import TeamDetailsPage from "./components/TeamDetails";
 
 
 export default function App() {
@@ -15,7 +16,7 @@ export default function App() {
          <Route path="/" element={<LandingPage />} />
          <Route path="/about" element={<AboutPage />} />
          <Route path="/team" element={<TeamPage />} />
-        
+        <Route path="/team-details" element={<TeamDetailsPage />} />
       </Route>
     </Routes>
   );
