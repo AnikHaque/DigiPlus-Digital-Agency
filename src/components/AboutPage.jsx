@@ -152,39 +152,42 @@ function AboutCompany() {
         {/* LEFT images */}
         <div className="flex w-full gap-4 md:w-1/2">
           <div className="flex-1 space-y-4">
-            <div className="h-64 overflow-hidden rounded-3xl md:h-80">
+            <div className="h-64 overflow-hidden rounded-3xl md:h-96">
               <img
-                src="/img/about-page-1.jpg"
+                src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/05/About-1.jpg"
                 alt="Team"
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="h-40 overflow-hidden rounded-3xl md:h-44">
+            <div className="h-40 overflow-hidden rounded-3xl md:h-80">
               <img
-                src="/img/about-page-2.jpg"
+                src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/05/About2.jpg"
                 alt="Meeting"
                 className="h-full w-full object-cover"
               />
             </div>
           </div>
           <div className="relative flex-1">
-            <div className="h-80 overflow-hidden rounded-3xl md:h-96">
+            <div className="h-80 overflow-hidden rounded-3xl md:h-80">
               <img
-                src="/img/about-page-3.jpg"
+                src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/05/About2.jpg"
                 alt="Discussion"
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 flex h-24 w-24 items-center justify-center rounded-full bg-yellow-400 text-[11px] font-semibold uppercase tracking-[0.16em] text-gray-900 shadow-lg">
-              Creative
-              <br />
-              Agency
+            <div className="h-80 overflow-hidden rounded-3xl md:h-80">
+              <img
+                src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/05/About2.jpg"
+                alt="Discussion"
+                className="h-full w-full object-cover"
+              />
             </div>
+           
           </div>
         </div>
 
         {/* RIGHT text */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 mt-15">
           <div className="flex items-center gap-3">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-yellow-500">
               About Our Company
