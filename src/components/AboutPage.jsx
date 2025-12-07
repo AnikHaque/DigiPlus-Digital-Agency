@@ -8,18 +8,22 @@ const processSteps = [
     step: "01",
     title: "Project Planning",
     items: ["Project Research", "Competitive Analysis", "Define Flow"],
+    image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/Shape-3.png", // 3D object image
   },
   {
     step: "02",
     title: "Development",
     items: ["Project Development", "Execution", "Error Fixing"],
+    image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/Shape-1.png",
   },
   {
     step: "03",
     title: "Quick Support",
-    items: ["Quality Assurance", "Launch Product", "Maintenance"],
+    items: ["Quality assurance", "Launch Product", "Maintenance"],
+    image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/Shape-2.png",
   },
 ];
+
 
 const serviceLines = [
   "Brand Identity",
@@ -254,26 +258,48 @@ function HowWeWork() {
             </h2>
           </div>
 
-          {/* Steps */}
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {processSteps.map((step) => (
               <div
                 key={step.step}
-                className="relative overflow-hidden rounded-3xl bg-white/5 p-6 text-sm text-white shadow-[0_24px_60px_rgba(0,0,0,0.60)]"
+                className="relative rounded-[1.75rem] border border-white/10 bg-white/[0.02] pt-14 pb-8 px-6 text-sm text-white shadow-[0_24px_60px_rgba(0,0,0,0.60)]"
               >
-                <div className="absolute right-5 top-5 flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-xs font-semibold">
-                  {step.step}
+                {/* STEP PILL – now visible */}
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2">
+                  <div className="flex h-10 w-20 items-center justify-center rounded-full border border-white/20 bg-white/10 text-xs font-semibold backdrop-blur">
+                    {step.step}
+                  </div>
                 </div>
-                <h3 className="mb-4 text-lg font-semibold">{step.title}</h3>
-                <ul className="space-y-2 text-xs text-gray-300">
+
+                {/* glow */}
+                <div className="pointer-events-none absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-orange-500/20 blur-2xl" />
+                <div className="pointer-events-none absolute -right-10 bottom-0 h-32 w-32 rounded-full bg-orange-500/10 blur-2xl" />
+
+                <h3 className="mb-5 text-lg font-semibold text-white">
+                  {step.title}
+                </h3>
+
+                <div className="space-y-4">
                   {step.items.map((item) => (
-                    <li key={item} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-yellow-400"></span>
+                    <div
+                      key={item}
+                      className="flex items-center justify-between rounded-full border border-white/15 bg-white/5 px-6 py-2 text-xs text-gray-100"
+                    >
                       <span>{item}</span>
-                    </li>
+                    </div>
                   ))}
-                </ul>
-               
+                </div>
+
+                {/* 3D image (optional) */}
+                {step.image && (
+                  <div className="pointer-events-none absolute -bottom-4 right-0 h-32 w-32 md:h-40 md:w-40">
+                    <img
+                      src={step.image}
+                      alt={step.title}
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -282,6 +308,8 @@ function HowWeWork() {
     </section>
   );
 }
+
+
 
 /* ------------------ SERVICES LINES DARK BLOCK ------------------ */
 
