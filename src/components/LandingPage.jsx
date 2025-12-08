@@ -1,6 +1,7 @@
  // LandingPage.jsx
 import  { useState } from "react";
 import { Header } from "./shared/Header";
+import { Footer } from "./shared/Footer";
 
 const navItems = ["Home", "About", "Services", "Work", "Blog", "Contact"];
 
@@ -137,10 +138,6 @@ export default function LandingPage() {
     </div>
   );
 }
-
-/* ---------------- HEADER ---------------- */
-
-
 
 /* ---------------- HERO ---------------- */
 
@@ -820,88 +817,3 @@ function Blog() {
   );
 }
 
-/* ---------------- FOOTER ---------------- */
-
-function Footer() {
-  return (
-    <footer className="bg-gray-900 pt-16 pb-8 text-gray-300">
-      <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
-        {/* Top CTA */}
-        <div className="flex flex-col justify-between gap-6 rounded-3xl bg-gradient-to-r from-amber-500 to-amber-400 p-8 text-gray-900 md:flex-row md:items-center">
-          <div>
-            <h3 className="text-xl font-bold">
-              Looking For A Professional Business Consultant?
-            </h3>
-            <p className="mt-2 text-sm text-gray-800">
-              Let&apos;s discuss your goals and build a roadmap together.
-            </p>
-          </div>
-          <button className="rounded-full bg-gray-900 px-6 py-3 text-xs font-semibold text-white">
-            Book A Call
-          </button>
-        </div>
-
-        {/* Footer content */}
-        <div className="mt-10 grid gap-8 text-sm md:grid-cols-4">
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-400 font-bold text-gray-900">
-                DP
-              </div>
-              <p className="text-lg font-semibold text-white">DigiPlus</p>
-            </div>
-            <p className="mt-3 text-xs text-gray-400">
-              A creative digital agency helping brands grow through design,
-              storytelling and performance marketing.
-            </p>
-          </div>
-
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
-              Quick Links
-            </p>
-            <div className="mt-3 flex flex-col gap-2 text-xs">
-              <a href="#" className="hover:text-amber-400">
-                About
-              </a>
-              <a href="#" className="hover:text-amber-400">
-                Services
-              </a>
-              <a href="#" className="hover:text-amber-400">
-                Case Studies
-              </a>
-              <a href="#" className="hover:text-amber-400">
-                Blog
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
-              Contact
-            </p>
-            <div className="mt-3 text-xs">
-              <p>hello@digiplus.com</p>
-              <p className="mt-1">+1 (555) 123 4567</p>
-              <p className="mt-2 text-gray-400">
-                242 Street Avenue, Suite 145, New York, NY
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-gray-800 pt-5 text-[11px] text-gray-500 md:flex-row">
-          <p>© {new Date().getFullYear()} DigiPlus. All rights reserved.</p>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-amber-400">
-              Terms
-            </a>
-            <a href="#" className="hover:text-amber-400">
-              Privacy
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
