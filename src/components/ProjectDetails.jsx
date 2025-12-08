@@ -1,4 +1,6 @@
 import React from "react";
+import { Footer } from "./shared/Footer";
+import { Header } from "./shared/Header";
 
 export default function ProjectDetailsPage() {
   return (
@@ -12,48 +14,6 @@ export default function ProjectDetailsPage() {
   );
 }
 
-/* ---------------- HEADER ---------------- */
-function Header() {
-  return (
-    <header className="sticky top-0 z-50 bg-gradient-to-b from-gray-900/95 to-gray-900/75 text-white backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
-        <div className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-400 font-bold text-gray-900">
-            DP
-          </div>
-          <div>
-            <p className="text-lg font-semibold leading-tight">DigiPlus</p>
-            <p className="text-[11px] text-gray-300">Digital Agency</p>
-          </div>
-        </div>
-
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
-          {["Home", "Pages", "Services", "Projects", "Blog", "Contact"].map(
-            (item) => (
-              <a key={item} className="hover:text-yellow-400 transition">{item}</a>
-            )
-          )}
-        </nav>
-
-        <div className="hidden items-center gap-4 md:flex">
-          <div className="flex items-center gap-2 text-xs">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-yellow-400/10">
-              📞
-            </div>
-            <div>
-              <p className="text-[11px] uppercase tracking-[.16em]">Call Anytime</p>
-              <p className="text-sm font-semibold">017-50050088</p>
-            </div>
-          </div>
-
-          <button className="h-10 w-10 rounded-full bg-white/10">☰</button>
-        </div>
-
-        <button className="h-9 w-9 rounded-full bg-white/10 text-sm md:hidden">☰</button>
-      </div>
-    </header>
-  );
-}
 
 /* ---------------- HERO SECTION ---------------- */
 function ProjectHero() {
@@ -179,59 +139,6 @@ function CTASection() {
   );
 }
 
-/* ---------------- FOOTER ---------------- */
-function Footer() {
-  return (
-    <footer className="bg-gray-900 pt-12 pb-10 text-gray-300">
-      <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8 grid gap-8 md:grid-cols-4 text-sm">
-        {/* 1 */}
-        <div>
-          <div className="flex items-center gap-2 mb-3">
-            <div className="h-9 w-9 flex items-center justify-center bg-yellow-400 rounded-xl text-gray-900 font-bold">
-              DP
-            </div>
-            <p className="text-lg font-semibold text-white">DigiPlus</p>
-          </div>
-          <p className="text-xs text-gray-400">
-            At vero eos et accusamus justo odio dignissimos ducimus blanditiis
-          </p>
 
-          <div className="mt-4 flex bg-gray-800 px-2 py-1 rounded-full items-center">
-            <input className="bg-transparent flex-1 px-2 text-xs outline-none" placeholder="Email address" />
-            <button className="bg-yellow-400 h-8 w-8 rounded-full text-gray-900 text-xs">➤</button>
-          </div>
-        </div>
 
-        {/* 2 */}
-        <FooterLinks title="Quick Link" links={["Feature", "Pricing Plan", "Best Program", "Press Kit"]} />
-        {/* 3 */}
-        <FooterLinks title="Company" links={["About", "Team Member", "Reviews", "Latest News"]} />
-        {/* 4 */}
-        <FooterLinks
-          title="Contact"
-          links={[
-            "55 Main Street, 2nd block Melbourne, Australia",
-            "Support@gmail.com",
-            "+000 (123) 44 55",
-          ]}
-        />
-      </div>
-      <p className="mt-8 border-t border-gray-800 pt-5 text-center text-[11px] text-gray-500">
-        © Copyright 2025 by kodesolution.com
-      </p>
-    </footer>
-  );
-}
 
-function FooterLinks({ title, links }) {
-  return (
-    <div>
-      <p className="text-xs uppercase tracking-[0.3em] text-gray-500">{title}</p>
-      <div className="mt-3 flex flex-col gap-2 text-xs">
-        {links.map((l) => (
-          <span key={l}>{l}</span>
-        ))}
-      </div>
-    </div>
-  );
-}
