@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from "react";
+ // LandingPage.jsx
+import  { useState } from "react";
 
 const navItems = ["Home", "About", "Services", "Work", "Blog", "Contact"];
 
@@ -139,47 +140,35 @@ export default function LandingPage() {
 /* ---------------- HEADER ---------------- */
 
 function Header() {
-  const [open, setOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  // Close on outside click
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
+const [open, setOpen] = useState(false);
   return (
-<header className="sticky top-0 z-40 bg-gradient-to-b from-gray-900/95 to-gray-900/75 text-white backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+ <header className="sticky top-0 z-40 bg-gradient-to-b from-gray-900/95 to-gray-900/75 text-white backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
 
         {/* Logo */}
-        <img
-          src="https://dev252.kodesolution.com/digiplus/wp-content/themes/digiplus/assets/images/logo/logo-wide-white.png"
-          className="w-32"
-          alt="logo"
-        />
+        <div className="flex items-center gap-2">
+          <img
+            src="https://dev252.kodesolution.com/digiplus/wp-content/themes/digiplus/assets/images/logo/logo-wide-white.png"
+            className="w-32"
+            alt="logo"
+          />
+        </div>
 
         {/* Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium relative">
+          <a href="#" className="transition hover:text-yellow-400">Home</a>
 
-          <a href="#" className="hover:text-yellow-400 transition">Home</a>
-
-          {/* Pages Dropdown */}
-          <div className="relative" ref={dropdownRef}>
+          {/* Pages Dropdown - CLICK TO OPEN */}
+          <div className="relative">
             <button
               onClick={() => setOpen(!open)}
-              className="flex items-center gap-1 hover:text-yellow-400 transition"
+              className="transition hover:text-yellow-400 flex items-center gap-1"
             >
-              Pages {open ? "▲" : "▼"}
+              Pages ▼
             </button>
 
             <div
-              className={`absolute left-0 mt-2 w-40 origin-top rounded-lg bg-gray-800 border border-gray-700 shadow-lg overflow-hidden transition-all duration-300 ${
+              className={`absolute left-0 mt-2 w-40 rounded-lg bg-gray-800 border border-gray-700 shadow-lg overflow-hidden transition-all duration-300 origin-top ${
                 open ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"
               }`}
             >
@@ -190,11 +179,30 @@ function Header() {
             </div>
           </div>
 
-          <a href="#" className="hover:text-yellow-400 transition">Services</a>
-          <a href="#" className="hover:text-yellow-400 transition">Projects</a>
-          <a href="#" className="hover:text-yellow-400 transition">Blog</a>
-          <a href="#" className="hover:text-yellow-400 transition">Contact</a>
+          <a href="#" className="transition hover:text-yellow-400">Services</a>
+          <a href="#" className="transition hover:text-yellow-400">Projects</a>
+          <a href="#" className="transition hover:text-yellow-400">Blog</a>
+          <a href="#" className="transition hover:text-yellow-400">Contact</a>
         </nav>
+
+        {/* Call + menu icon */}
+        <div className="hidden md:flex items-center gap-4">
+          <div className="flex items-center gap-2 text-xs text-gray-200">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-yellow-400/10">
+              📞
+            </div>
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.16em]">Call Anytime</p>
+              <p className="text-sm font-semibold">017-50050088</p>
+            </div>
+          </div>
+          <button className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10">☰</button>
+        </div>
+
+        {/* Mobile Menu Icon */}
+        <button className="inline-flex md:hidden h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm">
+          ☰
+        </button>
       </div>
     </header>
   );
