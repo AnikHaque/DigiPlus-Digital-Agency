@@ -1,5 +1,7 @@
-// WebDevelopmentPage.jsx
-import React, { useState } from "react";
+
+import  { useState } from "react";
+import { Footer } from "./shared/Footer";
+import { Header } from "./shared/Header";
 
 export default function WebDevelopmentPage() {
   return (
@@ -13,64 +15,6 @@ export default function WebDevelopmentPage() {
   );
 }
 
-/* ---------------- HEADER ---------------- */
-
-function Header() {
-  const menu = ["Home", "Pages", "Services", "Projects", "Blog", "Contact"];
-
-  return (
-    <header className="sticky top-0 z-40 bg-gradient-to-b from-gray-900/95 to-gray-900/75 text-white backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
-        {/* logo */}
-        <div className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-400 text-sm font-bold text-gray-900">
-            DP
-          </div>
-          <span className="text-lg font-semibold">DigiPlus</span>
-        </div>
-
-        {/* nav */}
-        <nav className="hidden items-center gap-6 text-sm md:flex">
-          {menu.map((item) => (
-            <a
-              key={item}
-              href="#"
-              className={`transition ${
-                item === "Services"
-                  ? "text-yellow-400"
-                  : "hover:text-yellow-400"
-              }`}
-            >
-              {item}
-            </a>
-          ))}
-        </nav>
-
-        {/* call + menu */}
-        <div className="hidden items-center gap-4 md:flex">
-          <div className="flex items-center gap-2 text-xs text-gray-200">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-yellow-400/10">
-              📞
-            </div>
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.16em]">
-                Call Anytime
-              </p>
-              <p className="text-sm font-semibold">017-50050088</p>
-            </div>
-          </div>
-          <button className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
-            ☰
-          </button>
-        </div>
-
-        <button className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm md:hidden">
-          ☰
-        </button>
-      </div>
-    </header>
-  );
-}
 
 /* ---------------- HERO ---------------- */
 
@@ -394,72 +338,6 @@ function CTASection() {
   );
 }
 
-/* ---------------- FOOTER ---------------- */
 
-function Footer() {
-  return (
-    <footer className="bg-gray-900 pb-10 pt-10 text-gray-300">
-      <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
-        <div className="grid gap-8 text-xs md:grid-cols-4">
-          {/* logo column */}
-          <div>
-            <div className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-yellow-400 font-bold text-gray-900">
-                DP
-              </div>
-              <p className="text-lg font-semibold text-white">DigiPlus</p>
-            </div>
-            <p className="mt-3 text-gray-400">
-              At vero eos et accusamus justo odio dignissimos ducimus blanditiis
-            </p>
-            <div className="mt-4 flex items-center rounded-full bg-gray-800 px-2 py-1">
-              <input
-                placeholder="Email address"
-                className="flex-1 bg-transparent px-2 text-[11px] outline-none"
-              />
-              <button className="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 text-gray-900 text-xs">
-                ➤
-              </button>
-            </div>
-          </div>
 
-          <FooterColumn
-            title="Quick Link"
-            items={["Features", "Pricing Plan", "Best Program", "Press Kit"]}
-          />
-          <FooterColumn
-            title="Company"
-            items={["About", "Team Member", "Reviews", "Latest News"]}
-          />
-          <FooterColumn
-            title="Contact"
-            items={[
-              "55 Main Street, 2nd block Melbourne, Australia",
-              "support@gmail.com",
-              "+000 (123) 44 55",
-            ]}
-          />
-        </div>
 
-        <div className="mt-8 border-t border-gray-800 pt-5 text-[11px] text-gray-500">
-          © Copyright 2025 by kodesolution.com
-        </div>
-      </div>
-    </footer>
-  );
-}
-
-function FooterColumn({ title, items }) {
-  return (
-    <div>
-      <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-gray-500">
-        {title}
-      </p>
-      <ul className="mt-3 space-y-2">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}

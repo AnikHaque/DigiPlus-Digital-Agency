@@ -1,6 +1,6 @@
-// ProjectsPage.jsx
-import React from "react";
+
 import { Footer } from "./shared/Footer";
+import { Header } from "./shared/Header";
 
 const projects = [
   { id: 1, image: "https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/06/project3-600x800.jpg" },
@@ -23,65 +23,7 @@ export default function ProjectsPage() {
   );
 }
 
-/* ---------------- HEADER ---------------- */
 
-function Header() {
-  return (
-    <header className="sticky top-0 z-40 bg-gradient-to-b from-gray-900/95 to-gray-900/75 text-white backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-400 font-bold text-gray-900">
-            DP
-          </div>
-          <div>
-            <p className="text-lg font-semibold leading-tight">DigiPlus</p>
-            <p className="text-[11px] text-gray-300">Digital Agency</p>
-          </div>
-        </div>
-
-        {/* Nav */}
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
-          {["Home", "Pages", "Services", "Projects", "Blog", "Contact"].map(
-            (item) => (
-              <a
-                key={item}
-                href="#"
-                className={`transition ${
-                  item === "Projects" ? "text-yellow-400" : "hover:text-yellow-400"
-                }`}
-              >
-                {item}
-              </a>
-            )
-          )}
-        </nav>
-
-        {/* Call + menu */}
-        <div className="hidden items-center gap-4 md:flex">
-          <div className="flex items-center gap-2 text-xs text-gray-200">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-yellow-400/10">
-              📞
-            </div>
-            <div>
-              <p className="text-[11px] uppercase tracking-[0.16em]">
-                Call Anytime
-              </p>
-              <p className="text-sm font-semibold">017-50050088</p>
-            </div>
-          </div>
-          <button className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
-            ☰
-          </button>
-        </div>
-
-        <button className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm md:hidden">
-          ☰
-        </button>
-      </div>
-    </header>
-  );
-}
 
 /* ---------------- HERO ---------------- */
 
