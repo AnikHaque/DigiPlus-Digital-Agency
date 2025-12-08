@@ -140,50 +140,48 @@ export default function LandingPage() {
 
 function Header() {
   return (
-    <header className="sticky top-0 z-40 bg-white/80 backdrop-blur">
+   <header className="sticky top-0 z-40 bg-gradient-to-b from-gray-900/95 to-gray-900/75 text-white backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-400 font-bold text-gray-900">
-            DP
-          </div>
-          <div className="leading-tight">
-            <p className="text-lg font-semibold">DigiPlus</p>
-            <p className="text-xs text-gray-500">Digital Agency</p>
-          </div>
+         <img src="https://dev252.kodesolution.com/digiplus/wp-content/themes/digiplus/assets/images/logo/logo-wide-white.png" className="w-32"></img>
+          
         </div>
 
         {/* Nav */}
-        <nav className="hidden items-center gap-6 text-sm font-medium text-gray-700 md:flex">
-          {navItems.map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="transition hover:text-yellow-500"
-            >
-              {item}
-            </a>
-          ))}
+        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+          {["Home", "Pages", "Services", "Projects", "Blog", "Contact"].map(
+            (item) => (
+              <a
+                key={item}
+                href="#"
+                className="transition hover:text-yellow-400"
+              >
+                {item}
+              </a>
+            )
+          )}
         </nav>
 
-        {/* Call to action */}
-        <div className="hidden items-center gap-3 md:flex">
-          <div className="flex items-center gap-2 text-xs text-gray-500">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400/10 text-yellow-500">
+        {/* Call + menu */}
+        <div className="hidden items-center gap-4 md:flex">
+          <div className="flex items-center gap-2 text-xs text-gray-200">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-yellow-400/10">
               📞
-            </span>
+            </div>
             <div>
-              <p className="font-medium text-gray-800">Need Help?</p>
-              <p>+1 (555) 123 4567</p>
+              <p className="text-[11px] uppercase tracking-[0.16em]">
+                Call Anytime
+              </p>
+              <p className="text-sm font-semibold">017-50050088</p>
             </div>
           </div>
-          <button className="rounded-full bg-yellow-400 px-5 py-2 text-sm font-semibold text-gray-900 shadow-md transition hover:bg-yellow-300">
-            Get Quote
+          <button className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
+            ☰
           </button>
         </div>
 
-        {/* Mobile menu icon (dummy) */}
-        <button className="inline-flex h-10 w-10 items-center justify-center rounded-full border md:hidden">
+        <button className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm md:hidden">
           ☰
         </button>
       </div>
@@ -250,9 +248,9 @@ function Hero() {
         {/* Right image */}
         <div className="w-full md:w-1/2">
           <div className="relative mx-auto flex max-w-md justify-center">
-            <div className="relative h-[420px] w-[280px] overflow-hidden rounded-[2.5rem] bg-gradient-to-b from-amber-300 to-amber-500 shadow-2xl">
+            <div className="relative h-[420px] w-[380px] overflow-hidden rounded-[2.5rem] bg-gradient-to-b from-amber-300 to-amber-500 shadow-2xl">
               <img
-                src="/img/hero-person.jpg"
+                src="https://dev252.kodesolution.com/digiplus/wp-content/uploads/2025/09/banner-image-8.png"
                 alt="Happy consultant"
                 className="h-full w-full object-cover"
               />
