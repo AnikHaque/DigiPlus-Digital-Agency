@@ -1,6 +1,6 @@
-// ContactPage.jsx
-import React from "react";
+
 import { Header } from "./shared/Header";
+import { Footer } from "./shared/Footer";
 
 export default function ContactPage() {
   return (
@@ -153,47 +153,6 @@ function CTASection() {
   );
 }
 
-/* ---------------- FOOTER ---------------- */
-
-function Footer() {
-  return (
-    <footer className="bg-gray-900 py-14 text-gray-400 text-xs">
-      <div className="mx-auto max-w-6xl grid gap-10 px-4 md:grid-cols-4">
-        <div>
-          <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-yellow-400 font-bold text-gray-900">
-              DP
-            </div>
-            <p className="text-white text-lg">DigiPlus</p>
-          </div>
-          <p className="mt-3">
-            At vero eos et accusamus justo odio dignissimos ducimus blanditiis
-          </p>
-          <div className="mt-4 flex rounded-full bg-gray-800 px-2 py-1">
-            <input
-              placeholder="Email address"
-              className="flex-1 bg-transparent px-2 outline-none"
-            />
-            <button className="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 text-gray-900">
-              ➤
-            </button>
-          </div>
-        </div>
-
-        <Column title="Quick Link" items={["Features", "Pricing Plan", "Best Program", "Press Kit"]} />
-        <Column title="Company" items={["About", "Team Member", "Reviews", "Latest News"]} />
-        <Column
-          title="Contact"
-          items={[
-            "55 Main Street, 2nd block Melbourne, Australia",
-            "support@gmail.com",
-            "+000 (123) 44 55",
-          ]}
-        />
-      </div>
-    </footer>
-  );
-}
 
 function Column({ title, items }) {
   return (
