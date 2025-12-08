@@ -1,5 +1,4 @@
- // LandingPage.jsx
-import React, { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const navItems = ["Home", "About", "Services", "Work", "Blog", "Contact"];
 
@@ -117,6 +116,7 @@ const clients = [
 ];
 
 export default function LandingPage() {
+  
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Header />
@@ -139,51 +139,62 @@ export default function LandingPage() {
 /* ---------------- HEADER ---------------- */
 
 function Header() {
+  const [open, setOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close on outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-   <header className="sticky top-0 z-40 bg-gradient-to-b from-gray-900/95 to-gray-900/75 text-white backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
+<header className="sticky top-0 z-40 bg-gradient-to-b from-gray-900/95 to-gray-900/75 text-white backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+
         {/* Logo */}
-        <div className="flex items-center gap-2">
-         <img src="https://dev252.kodesolution.com/digiplus/wp-content/themes/digiplus/assets/images/logo/logo-wide-white.png" className="w-32"></img>
-          
-        </div>
+        <img
+          src="https://dev252.kodesolution.com/digiplus/wp-content/themes/digiplus/assets/images/logo/logo-wide-white.png"
+          className="w-32"
+          alt="logo"
+        />
 
         {/* Nav */}
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
-          {["Home", "Pages", "Services", "Projects", "Blog", "Contact"].map(
-            (item) => (
-              <a
-                key={item}
-                href="#"
-                className="transition hover:text-yellow-400"
-              >
-                {item}
-              </a>
-            )
-          )}
-        </nav>
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium relative">
 
-        {/* Call + menu */}
-        <div className="hidden items-center gap-4 md:flex">
-          <div className="flex items-center gap-2 text-xs text-gray-200">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-yellow-400/10">
-              📞
-            </div>
-            <div>
-              <p className="text-[11px] uppercase tracking-[0.16em]">
-                Call Anytime
-              </p>
-              <p className="text-sm font-semibold">017-50050088</p>
+          <a href="#" className="hover:text-yellow-400 transition">Home</a>
+
+          {/* Pages Dropdown */}
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setOpen(!open)}
+              className="flex items-center gap-1 hover:text-yellow-400 transition"
+            >
+              Pages {open ? "▲" : "▼"}
+            </button>
+
+            <div
+              className={`absolute left-0 mt-2 w-40 origin-top rounded-lg bg-gray-800 border border-gray-700 shadow-lg overflow-hidden transition-all duration-300 ${
+                open ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"
+              }`}
+            >
+              <a className="block px-4 py-2 hover:bg-gray-700" href="#">About</a>
+              <a className="block px-4 py-2 hover:bg-gray-700" href="#">Team</a>
+              <a className="block px-4 py-2 hover:bg-gray-700" href="#">Pricing</a>
+              <a className="block px-4 py-2 hover:bg-gray-700" href="#">FAQ</a>
             </div>
           </div>
-          <button className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
-            ☰
-          </button>
-        </div>
 
-        <button className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sm md:hidden">
-          ☰
-        </button>
+          <a href="#" className="hover:text-yellow-400 transition">Services</a>
+          <a href="#" className="hover:text-yellow-400 transition">Projects</a>
+          <a href="#" className="hover:text-yellow-400 transition">Blog</a>
+          <a href="#" className="hover:text-yellow-400 transition">Contact</a>
+        </nav>
       </div>
     </header>
   );
